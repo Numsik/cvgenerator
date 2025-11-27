@@ -4,8 +4,8 @@
     justify-content: center;
     align-items: center;
 }
-.components{
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+.heading{
+    font-size: 80px;
+    margin: 0;
+    margin-bottom: 100px;
 }

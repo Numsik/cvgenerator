@@ -1,8 +1,8 @@
-import LeftPanel from "./functionality.jsx"
-import BlankPage from "./blankpage.jsx"
+import Aplikacka from "./functionality.jsx"
 
 import './styles/app.css'
 function App() {
+
 
   return (
     <>
@@ -10,10 +10,9 @@ function App() {
       
       <h1 className="heading">CV Generator</h1>
 
-      <div className="components">
-        <LeftPanel></LeftPanel>
-        <BlankPage/>
-      </div>
+      <Aplikacka/>
+
+        
     </div>
 
       
