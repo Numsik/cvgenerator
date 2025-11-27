@@ -10,6 +10,14 @@ function Aplikacka(){
     city: "Praha"
     })
 
+    const [education, setEducation] = useState({
+        school: "IT MINSTR ZEMĚ KOULE",
+        degree: "Softvware Engineer",
+        startdate: 2020,
+        enddate: 2024,
+        place: "prague"
+    })
+
     function handleChange(e){
        const {name, value} = e.target;
        SetArray(prevArray => ({
@@ -22,7 +30,7 @@ function Aplikacka(){
         <div className="page">
 
             <div className="query">
-                <div className="general-border">
+                <div className="generalinfo borderr">
                     <h1 className="general">General Information</h1>
             
                     <div className="inputy">
@@ -46,13 +54,40 @@ function Aplikacka(){
                     </div>
                 </div>
 
+                <div className="education borderr">
+                    <h1 className="general">Education</h1>
+            
+                    <div className="inputy">
+                        <p>Full Name</p>
+                        <input placeholder="Full Name" /> 
+                    </div>
+
+                    <div className="inputy">
+                        <p>Email</p>
+                        <input placeholder="Email" /> 
+                    </div>
+
+                    <div className="inputy">
+                        <p>Phone Number</p>
+                        <input placeholder="Phone" /> 
+                    </div>
+
+                    <div className="inputy">
+                        <p>City and province</p>
+                        <input placeholder="City and province"/> 
+                    </div>
+                </div>
+
             </div>
 
             <div className="blankpage">
-                <p className="color">{array.fullname}</p>
-                <p className="color">{array.email}</p>
-                <p className="color">{array.phone}</p>
-                <p className="color">{array.city}</p>
+                <p className="fullname">{array.fullname}</p>
+                <div className="contact">
+                    <p className="email">{array.email}</p>
+                    <p className="phone">{array.phone}</p>
+                    <p className="city">{array.city}</p>
+                </div>
+                
 
             </div>
 

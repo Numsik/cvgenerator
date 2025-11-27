@@ -1,33 +1,74 @@
-.general-border{
+.borderr{
     border: 1px solid white;
     border-radius: 10px;
-    padding: 10px;
+    padding: 30px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 330px;
 }
 .query{
-    width: 330px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .page{
     display: flex;
     flex-direction: row;
-    gap: 50px;
-}
-.blankpage{
-    width: 550px;
-    height: 200px;
-    background-color: white;
-}
-.blankpage p {
-    color: black;
+    gap: 150px;
 }
 
+
 .general{
-    font-size: 20px;
+    font-size: 30px;
+    margin: 0;
+    margin-bottom: 10px;
 }
 .inputy{
     display: flex;
     flex-direction: column;
 }
+.inputy input{
+    border: 1px solid #7EB2FF;
+    border-radius: 10px;
+    height: 25px;
+    width: 250px;
+    margin-bottom: 8px;
+    text-align: center;
+    color: rgb(184, 184, 184);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.281);
+}
 .inputy p{
     font-size: 12px;
     margin: 0;
+}
+
+/*tadyx zacine ta bila stranka*/
+.blankpage{
+    width: 900px;
+    height: auto;
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blankpage p {
+    color: black;
+}
+.fullname{
+    font-size: 50px;
+    margin: 10px 0; 
+    font-weight: 700;
+    text-align: center;
+}
+.contact{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+.contact p{
+    font-weight: 600;
+    font-size: 23px;
 }
