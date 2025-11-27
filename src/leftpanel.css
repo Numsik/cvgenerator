@@ -1,0 +1,14 @@
+.wholeass{
+    width: 500px;
+}
+.general{
+    font-size: 20px;
+}
+.inputy{
+    display: flex;
+    flex-direction: column;
+}
+.inputy p{
+    font-size: 12px;
+    margin: 0;
+}
