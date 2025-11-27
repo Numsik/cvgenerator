@@ -25,6 +25,13 @@ function Aplikacka(){
        }))
     }
 
+    function handleEducation(e){
+        const {name, value} = e.target
+        setEducation(array => ({
+            ...array, [name]: value
+        }))
+    }
+
     return(
         <>
         <div className="page">
@@ -58,35 +65,58 @@ function Aplikacka(){
                     <h1 className="general">Education</h1>
             
                     <div className="inputy">
-                        <p>Full Name</p>
-                        <input placeholder="Full Name" /> 
+                        <p>School</p>
+                        <input placeholder="School" value={education.school} name="school" onChange={handleEducation}/> 
                     </div>
 
                     <div className="inputy">
-                        <p>Email</p>
-                        <input placeholder="Email" /> 
+                        <p>Degree</p>
+                        <input placeholder="Degree" value={education.degree} name="degree" onChange={handleEducation}/> 
                     </div>
 
                     <div className="inputy">
-                        <p>Phone Number</p>
-                        <input placeholder="Phone" /> 
+                        <p>Start Date</p>
+                        <input placeholder="Start Date" value={education.startdate} name="startdate" onChange={handleEducation}/> 
                     </div>
 
                     <div className="inputy">
-                        <p>City and province</p>
-                        <input placeholder="City and province"/> 
+                        <p>End Date</p>
+                        <input placeholder="End Date" value={education.enddate} name="enddate" onChange={handleEducation}/> 
                     </div>
                 </div>
 
             </div>
 
             <div className="blankpage">
-                <p className="fullname">{array.fullname}</p>
-                <div className="contact">
-                    <p className="email">{array.email}</p>
-                    <p className="phone">{array.phone}</p>
-                    <p className="city">{array.city}</p>
+                <div>
+                    <p className="fullname">{array.fullname}</p>
+
+                    <div className="contact">
+                        <p className="email">{array.email}</p>
+                        <p className="phone">{array.phone}</p>
+                        <p className="city">{array.city}</p>
+                    </div>
                 </div>
+                <p className="educationheading">Education</p>
+                <div>
+                    
+
+                    <div className="display-row">
+                        <div>
+                            <p>{education.startdate}-{education.enddate}</p>
+                            <p>{education.place}</p>
+                        </div>
+
+                        <div>
+                            <p>{education.school}</p>
+                            <p>{education.degree}</p>
+                        </div>
+                    </div>
+
+                </div>
+                
+
+
                 
 
             </div>

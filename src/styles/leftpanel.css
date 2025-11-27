@@ -43,6 +43,22 @@
     font-size: 12px;
     margin: 0;
 }
+/*education*/
+.education{
+    margin-top: 50px;
+}
+.educationheading{
+    font-size: 40px;
+    font-weight: 600;
+}
+.display-row{
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+}
+.display-row p{
+    font-weight: 600;
+}
 
 /*tadyx zacine ta bila stranka*/
 .blankpage{
