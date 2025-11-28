@@ -5,14 +5,15 @@ import { useState } from "react"
 function Aplikacka(){
     const [array, SetArray] = useState({
     fullname: "Honzik Spalik",
-    email: "honzikuvemalik@seznam.cz",
+    email: "emalik@seznam.cz",
     phone: "777 777 777",
-    city: "Praha"
+    city: "Praha 1 Křepčích 755",
+    about: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium corporis eligendi quos natus consectetur sint eum nobis dolore neque error reiciendis explicabo ex minima quae fugit, corrupti, temporibus soluta blanditiis."
     })
 
     const [education, setEducation] = useState({
-        school: "IT MINSTR ZEMĚ KOULE",
-        degree: "Softvware Engineer",
+        school: "IT School",
+        degree: "software university",
         startdate: 2020,
         enddate: 2024,
         place: "prague"
@@ -39,7 +40,7 @@ function Aplikacka(){
             <div className="query">
                 <div className="generalinfo borderr">
                     <h1 className="general">General Information</h1>
-            
+
                     <div className="inputy">
                         <p>Full Name</p>
                         <input placeholder="Full Name" name="fullname" onChange={handleChange} value={array.fullname}/> 
@@ -58,6 +59,10 @@ function Aplikacka(){
                     <div className="inputy">
                         <p>City and province</p>
                         <input placeholder="City and province" name="city" onChange={handleChange} value={array.city}/> 
+                    </div>
+                    <div className="inputy">
+                        <p>Tell something about yourself</p>
+                        <textarea placeholder="About" name="about" onChange={handleChange} value={array.about}/> 
                     </div>
                 </div>
 
@@ -89,29 +94,55 @@ function Aplikacka(){
 
             <div className="blankpage">
                 <div>
-                    <p className="fullname">{array.fullname}</p>
+                    <div className="display-row">
+                        <div className="uprava">
+                            <p className="fullname">{array.fullname}</p>
+                            <p className="about">{array.about}</p>
+                        </div>
 
-                    <div className="contact">
-                        <p className="email">{array.email}</p>
-                        <p className="phone">{array.phone}</p>
-                        <p className="city">{array.city}</p>
+                        <div className="contact">
+                            <p className="email">{array.email}</p>
+                            <p className="phone">{array.phone}</p>
+                            <p className="city">{array.city}</p>
+                        </div>
                     </div>
+                    
+
+
                 </div>
-                <p className="educationheading">Education</p>
+
+                <div className="row nejakejcenter">
+                    <div>
+                        <p className="educationheading">Education Background</p>
+                        <hr></hr>
+
+                        <div className="row">
+
+                            <div>
+                                <p>{education.school}</p>
+                                <p>{education.degree}</p>
+                            </div>
+
+                            <div>
+                                <p>{education.startdate}-{education.enddate}</p>
+                                <p>{education.place}</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div className="mm">
+                        <p className="technicalskils">Technical Skills</p>
+                        <hr></hr>
+                    </div>
+                    
+
+                </div>
+                
                 <div>
                     
 
-                    <div className="display-row">
-                        <div>
-                            <p>{education.startdate}-{education.enddate}</p>
-                            <p>{education.place}</p>
-                        </div>
 
-                        <div>
-                            <p>{education.school}</p>
-                            <p>{education.degree}</p>
-                        </div>
-                    </div>
 
                 </div>
                 

@@ -39,6 +39,24 @@
     color: rgb(184, 184, 184);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.281);
 }
+textarea{
+    border: 1px solid #7EB2FF;
+    border-radius: 10px;
+    height: 120px;
+    width: 240px;
+    margin-bottom: 8px;
+    padding: 5px;
+    color: rgb(184, 184, 184);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.281);
+}
+.uprava{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.about{
+    max-width: 400px;
+}
 .inputy p{
     font-size: 12px;
     margin: 0;
@@ -48,16 +66,34 @@
     margin-top: 50px;
 }
 .educationheading{
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 600;
+    margin: 10px;
 }
 .display-row{
     display: flex;
     flex-direction: row;
     gap: 150px;
+    align-items: center;
 }
 .display-row p{
     font-weight: 600;
+}
+.mm{
+    margin-top: 15px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.nejakejcenter{
+    width: 80%;
+    align-items: start;
+}
+.technicalskils{
+    font-size: 20px;
+    margin: 10px;
 }
 
 /*tadyx zacine ta bila stranka*/
@@ -81,10 +117,11 @@
 }
 .contact{
     display: flex;
-    flex-direction: row;
-    gap: 30px;
+    flex-direction: column;
 }
 .contact p{
     font-weight: 600;
-    font-size: 23px;
+    font-size: 15px;
+    margin: 5px;
+    text-align: end;
 }
