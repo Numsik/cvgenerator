@@ -16,8 +16,18 @@ function Aplikacka(){
         degree: "software university",
         startdate: 2020,
         enddate: 2024,
-        place: "prague"
+        place: "Prague",
+        skills: "Adobe Figma Html Css"
     })
+
+    function renderSkills(skillsString) {
+        return skillsString
+            .split(' ')  
+            .map((skill, index) => (
+                <li key={index}>{skill}</li>
+            ))
+    }
+
 
     function handleChange(e){
        const {name, value} = e.target;
@@ -36,6 +46,7 @@ function Aplikacka(){
     return(
         <>
         <div className="page">
+            
 
             <div className="query">
                 <div className="generalinfo borderr">
@@ -112,28 +123,29 @@ function Aplikacka(){
                 </div>
 
                 <div className="row nejakejcenter">
-                    <div>
-                        <p className="educationheading">Education Background</p>
-                        <hr></hr>
+                    <div style={{width: 400}}>
+                        <p className="educationheading" style={{color: "#7EB2FF"}}>Education</p>
+                        <hr style={{color: "#7EB2FF"}}></hr>
 
                         <div className="row">
 
-                            <div>
-                                <p>{education.school}</p>
+                            <div className="changemarginp">
+                                <p style={{marginBottom: 0}}>{education.school}</p>
                                 <p>{education.degree}</p>
                             </div>
 
-                            <div>
+                            <div className="changemarginp">
                                 <p>{education.startdate}-{education.enddate}</p>
-                                <p>{education.place}</p>
+                                <p>{education.place }</p>
                             </div>
 
                         </div>
 
                     </div>
-                    <div className="mm">
-                        <p className="technicalskils">Technical Skills</p>
-                        <hr></hr>
+                    <div className="mm" style={{width: 200}}>
+                        <p className="technicalskils" style={{color: "#7EB2FF"}}>Technical Skills</p>
+                        <hr style={{color: "#7EB2FF"}}></hr>
+                        <ul style={{color: "black", paddingLeft: 20}}>{renderSkills(education.skills)}</ul>
                     </div>
                     
 
