@@ -19,6 +19,7 @@ function Aplikacka(){
         place: "Prague",
         skills: "Adobe Figma Html Css"
     })
+    const [experience, SetExperience] = useState("IT COMPANY NETFLIX")
 
     function renderSkills(skillsString) {
         return skillsString
@@ -27,6 +28,7 @@ function Aplikacka(){
                 <li key={index}>{skill}</li>
             ))
     }
+
 
 
     function handleChange(e){
@@ -101,6 +103,19 @@ function Aplikacka(){
                     </div>
                 </div>
 
+                <div className="education borderr">
+                    <h1 className="general">Work</h1>
+            
+                    <div className="inputy">
+                        <p>Work Experience</p>
+                        <input placeholder="Experience" value={experience} onChange={e => SetExperience(e.target.value)}/>
+                        <p>Skills</p>
+                        <input placeholder="Skills" value={education.skills} name="skills" onChange={handleEducation}/>
+                    </div>
+
+
+                </div>
+
             </div>
 
             <div className="blankpage">
@@ -147,16 +162,25 @@ function Aplikacka(){
                         <hr style={{color: "#7EB2FF"}}></hr>
                         <ul style={{color: "black", paddingLeft: 20}}>{renderSkills(education.skills)}</ul>
                     </div>
+
                     
 
                 </div>
                 
-                <div>
+            <div>
+                    <div className="displaik">
+                        <p style={{fontSize: 30, color: "#7EB2FF", margin: 10}}>JOB Experience</p>
+                        <hr style={{width: 918, margin:0}}></hr>
+                        <ul>
+                            <span style={{color: "black"}}>{renderSkills(experience)}</span>
+                        </ul>
+                        
+                    </div>
                     
 
 
 
-                </div>
+        </div>
                 
 
 
